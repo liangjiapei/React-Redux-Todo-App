@@ -11,15 +11,18 @@ var store = require('configureStore').configure();
 
 var TodoAPI = require('TodoAPI');
 
-store.subscribe(() => {
-  var state = store.getState();
-  console.log('New state', state);
-  TodoAPI.setTodos(state.todos);
-});
+// store.subscribe(() => {
+//   var state = store.getState();
+//   console.log('New state', state);
+//   TodoAPI.setTodos(state.todos);
+// });
 
 // Import todos from local storage
-var initialTodos = TodoAPI.getTodos();
-store.dispatch(actions.addTodos(initialTodos));
+// var initialTodos = TodoAPI.getTodos();
+// store.dispatch(actions.addTodos(initialTodos));
+
+// Import todos from firebase
+store.dispatch(actions.startAddTodos());
 
 // Load foundation
 $(document).foundation();
