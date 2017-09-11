@@ -8,7 +8,7 @@ export var TodoSearch = React.createClass({
     return (
       <div className="container__header">
         <div>
-          <input type="search" ref="searchText" placeholder="search todos" value={searchText} onChange={() => {
+          <input type="search" ref="searchText" placeholder="search todos" style={styles.inputStyle} value={searchText} onChange={() => {
             var newSearchText = this.refs.searchText.value;
             dispatch(actions.setSearchText(newSearchText));
           }}/>
@@ -34,3 +34,10 @@ var mapStateToProps = (state) => {
 };
 
 export default connect(mapStateToProps)(TodoSearch);
+
+let styles = {
+  inputStyle: {
+    height: "60px",
+    fontSize: "2rem"
+  }
+}

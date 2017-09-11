@@ -20,8 +20,8 @@ export var AddTodo = React.createClass({
     return (
       <div className="container__footer">
         <form onSubmit={this.handleSubmit}>
-          <input type="text" ref="todoText" placeholder="What do you need to do?"/>
-          <button className="button expanded">Add Todo</button>
+          <input type="text" ref="todoText" style={styles.inputStyle} placeholder="What do you need to do?"/>
+          <button className="button expanded" style={{fontSize: "2rem"}} >Add Todo</button>
         </form>
       </div>
     );
@@ -29,3 +29,10 @@ export var AddTodo = React.createClass({
 });
 
 export default connect()(AddTodo);
+
+let styles = {
+  inputStyle: {
+    height: "60px",
+    fontSize: "2rem"
+  }
+}

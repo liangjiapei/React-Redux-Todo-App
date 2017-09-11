@@ -18,13 +18,13 @@ export var TodoApp = React.createClass({
       <div>
 
         <div className="page-actions">
-          <a href="#" onClick={this.onLogout}>Logout</a>
+          <a href="#" onClick={this.onLogout} style={{fontSize: "2rem"}}>Logout</a>
         </div>
 
         <h1 className="page-title">React Redux Todo App</h1>
 
         <div className="row">
-          <div className="column small-centered small-11 medium-8 large-8">
+          <div className="column small-centered small-12 medium-12 large-8">
             <div className="container">
               <TodoSearch/>
               <TodoList/>
